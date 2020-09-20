@@ -1,0 +1,6 @@
+.college-listing {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 25px;
+  padding: 25px;
+}

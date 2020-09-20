@@ -1,0 +1,41 @@
+.flex-class {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.college-card {
+  width: 637.3px;
+  border-radius: 3.8px;
+  box-shadow: 0 0 19px 0 rgba(68, 68, 68, 0.1);
+  border: solid 0.2px rgba(68, 68, 68, 0.1);
+  background-color: #ffffff;
+}
+
+.image-class {
+  width: 100%;
+}
+
+body {
+  font-size: 13.5px;
+}
+
+.college-fee-discount-class {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-card {
+  width: 75px;
+  height: 53px;
+  border-radius: 3.8px;
+  background-color: #f5a626;
+}
+
+.top-half-card {
+  position: relative;
+}
+
+.bottom-half-card {
+  padding: 10px;
+}
