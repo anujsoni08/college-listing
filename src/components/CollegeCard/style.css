@@ -1,3 +1,8 @@
+body {
+  font-size: 13.5px;
+  font-family: "DINPro";
+}
+
 .flex-class {
   display: flex;
   justify-content: space-between;
@@ -16,26 +21,80 @@
   width: 100%;
 }
 
-body {
-  font-size: 13.5px;
-}
-
 .college-fee-discount-class {
   display: flex;
-  flex-direction: column;
 }
 
 .rating-card {
-  width: 75px;
   height: 53px;
   border-radius: 3.8px;
   background-color: #f5a626;
+  float: right;
+  margin: 25px 10px 10px;
+  padding: 5px;
 }
 
 .top-half-card {
   position: relative;
+  /* background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('../../assets/collegeImages/college.jpg'); */
 }
 
 .bottom-half-card {
   padding: 10px;
+}
+
+.zero-margin {
+  margin: 0;
+}
+
+.font-bold {
+  font-weight: 900;
+}
+
+.non-rated-star {
+  color: lightgrey;
+}
+
+.rated-star,
+.greyish-brown {
+  color: "#444444";
+}
+
+.promoted-div {
+  width: 152px;
+  height: 33px;
+  background-color: #68a7ff;
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 15% 50%, 0% 0%);
+  position: absolute;
+  top: -7%;
+  right: 0px;
+}
+
+.promoted-div .zero-margin {
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rating-text {
+  font-size: 20px;
+  color: white;
+}
+
+.rating-star-list {
+  margin-left: 10px;
 }
