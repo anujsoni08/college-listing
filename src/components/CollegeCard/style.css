@@ -1,6 +1,5 @@
 body {
   font-size: 13.5px;
-  font-family: "DINPro";
 }
 
 .flex-class {
@@ -145,7 +144,7 @@ body {
 
 .offer-text {
   background-color: #ccf5e7;
-  padding: 10px 0;
+  padding: 10px 7px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 52%;
