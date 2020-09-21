@@ -6,11 +6,13 @@ const useInfiniteScroll = (callback) => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (!isFetching) return;
     callback(() => {});
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isFetching]);
 
   const handleScroll = () => {
