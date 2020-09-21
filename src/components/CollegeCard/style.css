@@ -36,16 +36,19 @@ body {
 
 .top-half-card {
   position: relative;
-  /* background-image: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../../assets/collegeImages/college.jpg'); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/collegeImages/college.jpg");
+  background-size: cover;
+  width: 639px;
+  height: 234px;
 }
 
 .bottom-half-card {
-  padding: 10px;
+  padding: 10px 0;
+}
+
+.padx-10px {
+  padding: 0 10px;
 }
 
 .zero-margin {
@@ -97,4 +100,83 @@ body {
 
 .rating-star-list {
   margin-left: 10px;
+}
+
+.tag-1,
+.tag-2 {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 16.5px;
+  margin-left: 5px;
+  background: white;
+  color: #444444;
+}
+
+.ranking-class {
+  font-weight: 500;
+  line-height: 1.33;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.tag-ranking-upper-half {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.top-half-card > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.amenties {
+  color: #37b396;
+  width: 60px;
+  height: 10px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.offer-text {
+  background-color: #ccf5e7;
+  padding: 10px 0;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 52%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.original-fees {
+  text-decoration: line-through;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.discount {
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+  width: 29px;
+  font-size: 11px;
+  height: 14px;
+  text-align: right;
+  padding-right: 7px;
+  background-color: #dd1c26;
+  color: white;
+  background: radial-gradient(circle at 10px, transparent 6%, #dd1c26 5.5%);
+}
+
+.offer-text-login {
+  color: #1999d2;
 }

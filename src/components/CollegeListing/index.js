@@ -10,17 +10,16 @@ function CollegeListing() {
     collegeList.colleges.slice(0, 10)
   );
 
-  const [isFetching, setIsFetching] = useInfiniteScroll(fetchMoreListItems);
+  const [isFetching, setIsFetching] = useInfiniteScroll(fetchMoreListItems); // create hook for infinite scroll
 
   function fetchMoreListItems() {
-    console.log(collegeListRender);
     setTimeout(() => {
       setCollegeListRender((prevState) => [
         ...prevState,
         ...collegeList.colleges.slice(prevState.length, prevState.length + 10),
       ]);
       setIsFetching(false);
-    }, 2000);
+    }, 1000);
   }
 
   console.log(collegeListRender);
