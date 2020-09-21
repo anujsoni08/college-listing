@@ -22,8 +22,6 @@ function CollegeListing() {
     }, 1000);
   }
 
-  console.log(collegeListRender);
-
   return (
     <div className="college-listing">
       {collegeListRender.map((collegeData, index) => (

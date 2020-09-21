@@ -17,6 +17,45 @@ function CollegeCard(props) {
     return str.join(" ");
   };
 
+  const transformOfferText = (offertext) => {
+    const offertextArray = offertext.trim().split(" ");
+    const regexForInteger = new RegExp(/^[0-9]+$/); // eg 500
+    const regexForRsInteger = new RegExp(/^Rs[0-9]+$/); // eg Rs500
+    const regexForRsDecimal = new RegExp(/^Rs[0-9]+(,[0-9]+)?$/); // eg Rs2,000
+    const regexForLogin = new RegExp("LOGIN"); // LOGIN
+
+    offertextArray.forEach((text, index) => {
+      if (
+        regexForInteger.test(text) ||
+        regexForRsInteger.test(text) ||
+        regexForRsDecimal.test(text) ||
+        regexForLogin.test(text)
+      ) {
+        offertextArray[index] = `<span class="amenties">${text}</span>`;
+      }
+    });
+    return offertextArray.join(" ");
+  };
+
+  const transformNearestPlaces = (nearestPlaceText) => {
+    const nearestPlaceTextArray = nearestPlaceText.trim().split(" ");
+    const regexForKms = new RegExp("Kms"); // eg 500
+    const regexForInteger = new RegExp(/^[0-9]+$/); // eg Rs500
+    const regexForDecimal = new RegExp(/^[0-9]+(.[0-9]+)kms?$/); // eg 7.5
+
+    nearestPlaceTextArray.forEach((text, index) => {
+      if (
+        regexForKms.test(text) ||
+        regexForInteger.test(text) ||
+        regexForDecimal.test(text)
+      ) {
+        nearestPlaceTextArray[index] = `<span class="famous-nearest-places-innerhtml">${text}</span>`;
+      }
+    });
+    return nearestPlaceTextArray.join(" ");
+  };
+
+  // Render top half of card
   const renderTopHalf = () => {
     return (
       <div className="top-half-card">
@@ -44,6 +83,7 @@ function CollegeCard(props) {
     );
   };
 
+  // Render bottom half of card
   const renderBottomHalf = () => {
     return (
       <div className="bottom-half-card">
@@ -114,12 +154,20 @@ function CollegeCard(props) {
           <span style={{ color: "#37b396", fontWeight: 700 }}>
             93% Match :{" "}
           </span>
-          <span>{collegeData.famous_nearest_places}</span>
+          <span className="famous-nearest-places"
+            dangerouslySetInnerHTML={{
+              __html: transformNearestPlaces(collegeData.famous_nearest_places),
+            }}
+          ></span>
         </p>
         <div className="flex-class">
-          <p className="zero-margin offer-text" id="offer-text">
-            {collegeData.offertext}
-          </p>
+          <p
+            className="zero-margin offer-text"
+            id="offer-text"
+            dangerouslySetInnerHTML={{
+              __html: transformOfferText(collegeData.offertext),
+            }}
+          ></p>
           <p>
             <span className="amenties padx-10px">
               {" "}

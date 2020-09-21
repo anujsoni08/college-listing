@@ -179,3 +179,12 @@ body {
 .offer-text-login {
   color: #1999d2;
 }
+
+.famous-nearest-places {
+  color: #adadad;
+}
+
+.famous-nearest-places-innerhtml {
+  color: #444444;
+  font-weight: bold;
+}
