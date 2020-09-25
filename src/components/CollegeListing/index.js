@@ -5,7 +5,7 @@ import CollegeCard from "../CollegeCard";
 import * as collegeList from "../../utils/colleges.json";
 import "./style.css";
 
-function CollegeListing() {
+const CollegeListing = () => {
   const [collegeListRender, setCollegeListRender] = useState(
     collegeList.colleges.slice(0, 10)
   );
@@ -32,6 +32,6 @@ function CollegeListing() {
       {isFetching && "Fetching more list items..."}
     </div>
   );
-}
+};
 
 export default CollegeListing;
